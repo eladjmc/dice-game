@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset-norm.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dice Game | Elad's Game</title>
+</head>
+<body>
+    <div class="setup-Game">
+        <div class="instruction-up-container">
+            <h2 class="game-instructions">Game Instructions</h2>
+            <ul class="instructions">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat.</li>
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis!</li>
+            </ul>
+        </div>
+        <div class="start-game-container">
+            <h3 class="target-score">Please Select a Target Score</h3>
+            <div class="game-setting-box">
+                <input class="score-to-win-input" type="number" value="50" min="50" max="999">
+                <button class="start-game-btn">START GAME</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="game-container">
+        <div class="game-scene">
+            <section class="left">
+                <div class="left-background"></div>
+                <div class="player-score-container">
+                    <p class="player-name">PLAYER 1</p>
+                    <span class="player-score">0</span>
+                </div>
+                <div class="current-rolls-container">
+                    <span class="current-roll">CURRENT</span>
+                    <span class="current-roll-score">0</span>
+                </div>
+            </section>
+
+
+
+            <div class="game-controllers">
+                <div class="new-game-btn middle-btn">
+                    <div class="icon">I</div>
+                    <span>NEW GAME</span>
+                </div>
+                <div class="dice-one dice"></div>
+                <div class="dice-two dice"></div>
+                <div class="rolldice-btn middle-btn">
+                    <div class="icon">I2</div>
+                    <span>ROLL DICE</span>
+                </div>
+                <div class="hold-btn middle-btn">
+                    <div class="icon">I3</div>
+                    <span>HOLD</span>
+                </div>
+            </div>
+
+
+            <section class="right">
+                <div class="right-background"></div>
+                <div class="player-score-container">
+                    <p class="player-name">PLAYER 2</p>
+                    <span class="player-score">0</span>
+                </div>
+                <div class="current-rolls-container">
+                    <span class="current-roll">CURRENT</span>
+                    <span class="current-roll-score">0</span>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

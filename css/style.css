@@ -1,0 +1,268 @@
+/* Game setup */
+.setup-Game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 90vh;
+    width: 80%;
+    background-image: linear-gradient(to right, #a075a5, #b078a1, #be7b9c, #ca8097, #d38691);
+    border: #6C4374 solid 1rem;
+    border-radius: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+   
+}
+
+.instruction-up-container {
+    padding: 10% 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.start-game-container{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5rem;
+
+}
+
+.setup-Game  h2 {
+    font-size: 2.8rem;
+}
+.setup-Game   ul {
+    font-size: 1.6rem;
+}
+
+.target-score{
+    font-size: 2.2rem;
+}
+
+.score-to-win-input {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.start-game-btn {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 700;
+    opacity: .7;
+}
+
+
+
+.game-setting-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-game-btn:active {
+    margin-top: 2px;
+    height: calc(3rem - 2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.game-container{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #ae1e39, #9a1246, #81134f, #651852, #481b50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 36, 36);
+}
+section {
+    background-color: transparent;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+    align-items: center;
+    font-size: 4rem;
+    opacity: .7;
+}
+.game-scene {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    box-shadow: 4px 2px 14px 0px rgba(0,0,0,0.43);
+}
+.left{
+    box-shadow: -4px 2px 14px 0px rgba(0,0,0,0.43);
+}
+
+
+.left-background,.right-background{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: .9;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.right-background {
+    opacity: 0.4;
+}
+
+
+.player-score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+.player-score {
+    color: #9a1246 ;
+    font-size: 7rem;
+}
+
+.current-rolls-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 36%;
+    border-radius: 1rem;
+    height: 15rem;
+    background-color: #911C48;
+    box-shadow: 4px 2px 19px 0px rgba(0,0,0,0.47);
+    color: #fff;
+    
+}
+.game-controllers {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 10rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 5rem 0;
+}
+
+.new-game-btn {
+    cursor: pointer;
+    background-color: white;
+    width: 14rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    opacity: .7;
+    
+}
+
+.rolldice-btn {
+    cursor: pointer;
+    background-color: white;
+    width: 13rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    opacity: .7;
+}
+
+.hold-btn {
+    cursor: pointer;
+    background-color: white;
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    opacity: .7;
+}
+
+.dice-one {
+    margin-top: 6rem;
+}
+.dice-two{
+    margin-bottom: 6rem;
+}
+.dice {
+    height: 7rem;
+    width: 7rem;
+    background: url('/assets/images/dice-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: -4px 2px 14px 0px rgba(0,0,0,0.43);
+}
+
+.middle-btn:active {
+    margin-top: 1.5px;
+    height: calc(2.5rem - 1.5px) ;
+    margin-left: 3px;
+}
+
+
+
