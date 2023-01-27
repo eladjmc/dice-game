@@ -14,6 +14,7 @@ const gameSelectors = {
   gameSetupWindow: document.querySelector(".setup-game"),
   gameRestartBtn: document.querySelector(".new-game-btn"),
   holdButton: document.querySelector(".hold-btn"),
+  rollDice: document.querySelector(".rolldice-btn"),
 };
 
 const playerOneUiSelectors = {
@@ -44,7 +45,9 @@ const playerTwoUiSelectors = {
 
 let scoreToWin = 50;
 let winningMessage = "";
+let isGameOver = false;
 const startGameSound = new Audio("../assets/audio/RoundOneFight.mp3");
+const gameOverSound = new Audio("../assets/audio/Fatality.mp3");
 const player1 = new Player(true, "player1", playerOneUiSelectors);
 const player2 = new Player(false, "player2", playerTwoUiSelectors);
 
@@ -73,8 +76,9 @@ const startGame = () => {
 };
 
 const resetGame = () => {
+  removeWinsUI();
   gameSelectors.gameSetupWindow.style.display = "flex";
-
+  isGameOver = false;
   delay(100).then(() => (gameSelectors.gameSetupWindow.style.opacity = "1"));
 };
 
@@ -84,16 +88,21 @@ const evenListeners = () => {
     player2.reset(false, scoreToWin);
     startGame();
   });
-
+  
   gameSelectors.gameRestartBtn.addEventListener("click", () => {
     resetGame();
   });
-
+  
   gameSelectors.holdButton.addEventListener("click", () => {
+    if(isGameOver){
+      return;
+    }
     const playerWon = getWinner();
     if (!playerWon) {
       return;
     }
+    gameOverSound.play();
+    isGameOver=true;
     if (playerWon === 1) {
       setWinning(playerOneUiSelectors, playerTwoUiSelectors);
     } else {
@@ -127,16 +136,31 @@ const getWinner = () => {
 const setWinning = (winner, loser) => {
   player1.endTurn();
   player2.endTurn();
+  player1.isGameOver=isGameOver;
+  player2.isGameOver=isGameOver;
+  //winner-setup
   winner.winLossText.style.display = "block";
   winner.winLossText.textContent = "YOU WIN!";
   winner.winLossText.style.color = "#9a1246";
   winner.background.classList.add("back-win");
-  winner.playersName.classList.add('winning-player-text');
-
+  winner.playersName.classList.add("winning-player-text");
+  //loser-setup
   loser.winLossText.style.display = "block";
   loser.winLossText.textContent = winningMessage;
   loser.winLossText.style.color = "#2f2f2f";
+  
 };
+
+const removeWinsUI = () =>{
+  playerOneUiSelectors.background.classList.remove("back-win");
+  playerTwoUiSelectors.playersName.classList.remove("winning-player-text");
+  playerTwoUiSelectors.background.classList.remove("back-win");
+  playerTwoUiSelectors.playersName.classList.remove("winning-player-text");
+  playerOneUiSelectors.winLossText.style.display = "none";
+  playerTwoUiSelectors.winLossText.style.display = "none";
+  playerOneUiSelectors.winLossText.style.color = "black"; 
+  playerTwoUiSelectors.winLossText.style.color = "black";
+}
 
 const delay = (time) => {
   return new Promise((resolve) => setTimeout(resolve, time));

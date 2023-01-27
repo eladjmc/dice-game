@@ -5,7 +5,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     height: 90vh;
-    width: 65%;
+    width: 75%;
     background-image: linear-gradient(to right, #a075a5, #b078a1, #be7b9c, #ca8097, #d38691);
     border: #6C4374 solid 1rem;
     border-radius: 2rem;
@@ -314,3 +314,97 @@ section {
 .winning-player-text{
     color:#9a1246;
 }
+
+@media only screen and (max-width: 600px) {
+    body,html {
+        font-size: 45%;
+    }
+    .game-scene{
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
+    .middle-btn {
+        width: 22rem;
+        height: 5rem;
+        font-size: 1.9rem;
+        font-weight: 900;
+        margin-top: 1rem;
+        transition: 0.3s all;
+    }
+
+    .middle-btn:active{
+        margin: 0;
+        height: 5rem;
+        background-color: #ae1e39;
+        color: white;
+    }
+
+    .game-controllers{
+        justify-content: center;
+        gap : 1rem;
+    }
+    .dice-one{
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+    .dice-two{
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+    .current-rolls-container{
+        width: 80%;
+    }
+    .right, .left {
+        padding: 1rem 0;
+    }
+    .game-controllers{
+        padding: 0;
+        padding-bottom: 14rem;
+    }
+    .setup-game{
+        width: 95%;
+        height: 98%;
+    }
+    .setup-game h2{
+        font-size: 5rem;
+    }
+    .setup-game h3{
+        font-size: 3rem;
+    }
+    .error-input{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .setup-game ul{
+        padding-left: 10px;
+        margin-top: 5px;
+        font-size: 3rem;
+    }
+
+    .score-to-win-input{
+        width: 30rem;
+        height: 7rem;
+        font-size: 5rem;
+    }
+    .start-game-btn{
+        margin-top: 10px;
+        width: 25rem;
+        height: 8rem;
+        font-size: 3rem;
+    }
+    .start-game-btn:active {
+        width: 25rem;
+        height: 8rem;
+        margin-top: 10px;
+        padding: 0;
+        font-size: 3rem;
+        background-color: #ae1e39;
+        color: white;
+    }
+
+
+    .game-setting-box{
+        height: 70%;
+        margin: 0;
+    }
+  }
