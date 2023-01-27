@@ -9,7 +9,7 @@
     <title>Dice Game | Elad's Game</title>
 </head>
 <body>
-    <div class="setup-Game">
+    <div class="setup-game">
         <div class="instruction-up-container">
             <h2 class="game-instructions">Game Instructions</h2>
             <ul class="instructions">
@@ -21,6 +21,7 @@
         </div>
         <div class="start-game-container">
             <h3 class="target-score">Please Select a Target Score</h3>
+            <span class="error-input">Please insert value input for the score!</span>
             <div class="game-setting-box">
                 <input class="score-to-win-input" type="number" value="50" min="50" max="999">
                 <button class="start-game-btn">START GAME</button>
@@ -32,12 +33,13 @@
     <div class="game-container">
         <div class="game-scene">
             <section class="left">
-                <div class="left-background"></div>
+                <div class="left-background not-my-turn-background"></div>
                 <div class="player-score-container">
                     <p class="player-name">PLAYER 1</p>
                     <span class="player-score">0</span>
                 </div>
-                <div class="current-rolls-container">
+                <div class="current-rolls-container not-my-turn-score-container">
+                    <span class="win-loss">YOU WIN!</span>
                     <span class="current-roll">CURRENT</span>
                     <span class="current-roll-score">0</span>
                 </div>
@@ -64,17 +66,19 @@
 
 
             <section class="right">
-                <div class="right-background"></div>
-                <div class="player-score-container">
+                <div class="right-background my-turn-background"></div>
+                <div class="player-score-container ">
                     <p class="player-name">PLAYER 2</p>
                     <span class="player-score">0</span>
                 </div>
-                <div class="current-rolls-container">
+                <div class="current-rolls-container my-turn-score-container">
+                    <span class="win-loss">YOU LOSE</span>
                     <span class="current-roll">CURRENT</span>
                     <span class="current-roll-score">0</span>
                 </div>
             </section>
         </div>
     </div>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

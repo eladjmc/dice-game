@@ -1,11 +1,11 @@
 /* Game setup */
-.setup-Game{
+.setup-game{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 90vh;
-    width: 80%;
+    width: 65%;
     background-image: linear-gradient(to right, #a075a5, #b078a1, #be7b9c, #ca8097, #d38691);
     border: #6C4374 solid 1rem;
     border-radius: 2rem;
@@ -13,8 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: .7s all ;
 
-   
 }
 
 .instruction-up-container {
@@ -33,10 +33,10 @@
 
 }
 
-.setup-Game  h2 {
+.setup-game  h2 {
     font-size: 2.8rem;
 }
-.setup-Game   ul {
+.setup-game   ul {
     font-size: 1.6rem;
 }
 
@@ -79,6 +79,15 @@
     height: calc(3rem - 2px);
 }
 
+.error-input {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: rgb(169, 5, 5);
+    opacity: 0;
+}
+
+
+
 
 
 
@@ -112,7 +121,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(39, 36, 36);
+    /* color: rgb(39, 36, 36); */
 }
 section {
     background-color: transparent;
@@ -125,7 +134,7 @@ section {
     padding: 10rem 0;
     align-items: center;
     font-size: 4rem;
-    opacity: .7;
+    z-index: 1;
 }
 .game-scene {
     height: 100%;
@@ -137,9 +146,11 @@ section {
 
 .right {
     box-shadow: 4px 2px 14px 0px rgba(0,0,0,0.43);
+    
 }
 .left{
     box-shadow: -4px 2px 14px 0px rgba(0,0,0,0.43);
+    
 }
 
 
@@ -151,6 +162,7 @@ section {
     background-color: #fff;
     height: 100%;
     width: 100%;
+    transition: 0.4s all;
 }
 
 .right-background {
@@ -172,6 +184,7 @@ section {
 }
 
 .current-rolls-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,6 +197,11 @@ section {
     box-shadow: 4px 2px 19px 0px rgba(0,0,0,0.47);
     color: #fff;
     
+}
+
+.current-roll {
+    font-weight: 500;
+    font-size: 1.8rem;
 }
 .game-controllers {
     position: absolute;
@@ -249,8 +267,8 @@ section {
     margin-bottom: 6rem;
 }
 .dice {
-    height: 7rem;
-    width: 7rem;
+    height: 11rem;
+    width: 11rem;
     background: url('/assets/images/dice-1.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -264,5 +282,35 @@ section {
     margin-left: 3px;
 }
 
+.win-loss {
+    display: none;
+    position: absolute;
+    font-size: 2.2rem;
+    width: 25rem;
+    text-align: center;
+    font-weight: bold;
+    top: -5rem;
+}
 
 
+.my-turn-score-container{
+    opacity: 1;
+}
+.my-turn-background{
+    opacity: 0.6;
+}
+.not-my-turn-score-container{
+    opacity: 0.8;
+}
+.not-my-turn-background{
+    opacity: 0.3;
+    
+}
+.back-win {
+    background-color: #2f2f2f;
+    opacity: 1 ;
+}
+
+.winning-player-text{
+    color:#9a1246;
+}
