@@ -295,6 +295,14 @@ section {
   color: #9a1246;
 }
 
+
+.icon {
+  height: calc(100% - 4px);
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
   body,
   html {
