@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/assets/images/dices.png">
     <link rel="stylesheet" href="css/reset-norm.css">
+    <link rel="stylesheet" href="./css/game-menu.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/util-and-themes.css">
+    <link rel="stylesheet" href="./css/mobile-styling.css">
     <title>Dice Game | Elad's Game</title>
 </head>
+
 <body>
+    <!-- ######################################################################################################################### -->
+    <!-- #                                                                                                                       # -->
+    <!-- #                                           Game Setup Menu                                                             # -->
+    <!-- #                                                                                                                       # -->
+    <!-- ######################################################################################################################### -->
 
     <div class="setup-game">
         <div class="instruction-up-container">
@@ -21,9 +31,12 @@
             </div>
             <h2 class="game-instructions">Game Instructions</h2>
             <ul class="instructions">
-                <li>The game has 2 players, playing in rounds. In each turn, a player rolls 2 dice as many times as he wishes.</li>
-                <li>Each result will get added to his round's score. But if the player rolls a double six all his round's score gets lost. After that, it's the next player's turn.</li>
-                <li>A player can choose to 'Hold', which means that his round's score gets added to his global score. After that, it's the next player's turn.</li>
+                <li>The game has 2 players, playing in rounds. In each turn, a player rolls 2 dice as many times as he
+                    wishes.</li>
+                <li>Each result will get added to his round's score. But if the player rolls a double six all his
+                    round's score gets lost. After that, it's the next player's turn.</li>
+                <li>A player can choose to 'Hold', which means that his round's score gets added to his global score.
+                    After that, it's the next player's turn.</li>
                 <li>The first player to reach the target points wins - points Range from 50-999</li>
             </ul>
         </div>
@@ -37,6 +50,12 @@
         </div>
     </div>
 
+
+    <!-- ######################################################################################################################### -->
+    <!-- #                                                                                                                       # -->
+    <!-- #                                           Game Board Left Side                                                        # -->
+    <!-- #                                                                                                                       # -->
+    <!-- ######################################################################################################################### -->
 
     <div class="game-container">
         <div class="game-scene">
@@ -55,6 +74,12 @@
 
 
 
+            <!-- ######################################################################################################################### -->
+            <!-- #                                                                                                                       # -->
+            <!-- #                                        Game Middle Buttons                                                            # -->
+            <!-- #                                                                                                                       # -->
+            <!-- ######################################################################################################################### -->
+
             <div class="game-controllers">
                 <div class="new-game-btn middle-btn">
                     <img class="icon" src="/assets/images/newGameIcon.png" alt="I">
@@ -72,7 +97,11 @@
                 </div>
             </div>
 
-
+            <!-- ######################################################################################################################### -->
+            <!-- #                                                                                                                       # -->
+            <!-- #                                           Game Board Right Side                                                        # -->
+            <!-- #                                                                                                                       # -->
+            <!-- ######################################################################################################################### -->
             <section class="right">
                 <div class="right-background my-turn-background"></div>
                 <div class="player-score-container ">
@@ -88,7 +117,10 @@
 
         </div>
     </div>
-
+<!-- ######################################################################################################################### -->
+<!-- #                                          Game Logic Script -js                                                        # -->
+<!-- ######################################################################################################################### -->
     <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>

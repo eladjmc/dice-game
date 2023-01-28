@@ -1,0 +1,128 @@
+/* Game setup */
+.setup-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 75%;
+    background-image: linear-gradient(
+      to right,
+      #a075a5,
+      #b078a1,
+      #be7b9c,
+      #ca8097,
+      #d38691
+    );
+    border: #6c4374 solid 1rem;
+    border-radius: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.7s all;
+  }
+  
+  .instruction-up-container {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .start-game-container {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5rem;
+  }
+  
+  .theme-colors-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+  .theme-color {
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    background-color: #2f2f2f;
+    border: 1.2px solid black;
+    box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.43);
+  }
+  
+  .setup-game h2 {
+    font-size: 2.8rem;
+  }
+  .setup-game ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.9rem;
+  }
+  .setup-game ul li {
+    margin-top: 0.3rem;
+  }
+  
+  .target-score {
+    font-size: 2.2rem;
+  }
+  
+  .score-to-win-input {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .start-game-btn {
+    width: 18rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 700;
+    opacity: 0.7;
+  }
+  
+  .game-setting-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .start-game-btn:active {
+    margin-top: 2px;
+    height: calc(3rem - 2px);
+  }
+  
+  .error-input {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: rgb(169, 5, 5);
+    opacity: 0;
+  }
+  
+  .game-container {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+      to right bottom,
+      #ae1e39,
+      #9a1246,
+      #81134f,
+      #651852,
+      #481b50
+    );
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: rgb(39, 36, 36); */
+  }

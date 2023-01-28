@@ -127,6 +127,10 @@ const evenListeners = () => {
   }
 };
 
+// #########################################################################################################################
+// #                                       Winner Display LOGIC                                                            #
+// #########################################################################################################################
+
 const getWinner = () => {
   const playerOneScore = Number(playerOneUiSelectors.playersScore.textContent);
   const playerTwoScore = Number(playerTwoUiSelectors.playersScore.textContent);
@@ -164,6 +168,9 @@ const setWinning = (winner, loser) => {
   loser.winLossText.classList.add('lose-text');
   loser.winLossText.textContent = winningMessage;
 };
+// #########################################################################################################################
+// #                                      Remove Added UI After Restarts                                                   #
+// #########################################################################################################################
 
 const removeWinsUI = () => {
   playerOneUiSelectors.playersName.classList.add('lose-text');
@@ -177,6 +184,13 @@ const removeWinsUI = () => {
   playerOneUiSelectors.winLossText.style.display = "none";
   playerTwoUiSelectors.winLossText.style.display = "none";
 };
+
+
+
+// #########################################################################################################################
+// #                                      THEME CHANGE LOGIC                                                               #
+// #########################################################################################################################
+
 
 const changeTheme = (themeId) => {
   for (let i = 0; i < gameSelectors.themeColor.length; i++) {
@@ -211,6 +225,8 @@ const changeTheme = (themeId) => {
   playerTwoUiSelectors.playersScore.classList.add(`winning-player-text-${themeId}`);
 };
 
+
+//TODO: replace this with none promise delay
 const delay = (time) => {
   return new Promise((resolve) => setTimeout(resolve, time));
 };
