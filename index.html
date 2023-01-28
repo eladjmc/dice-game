@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/images/dices.png">
     <link rel="stylesheet" href="css/reset-norm.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Dice Game | Elad's Game</title>
 </head>
 <body>
+
     <div class="setup-game">
         <div class="instruction-up-container">
+            <div class="theme-colors-container">
+                <span class="theme-text">Theme:</span>
+                <div class="color-1 theme-color"></div>
+                <div class="color-2 theme-color"></div>
+                <div class="color-3 theme-color"></div>
+            </div>
             <h2 class="game-instructions">Game Instructions</h2>
             <ul class="instructions">
                 <li>The game has 2 players, playing in rounds. In each turn, a player rolls 2 dice as many times as he wishes.</li>
@@ -77,8 +85,10 @@
                     <span class="current-roll-score">0</span>
                 </div>
             </section>
+
         </div>
     </div>
+
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

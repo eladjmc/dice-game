@@ -24,7 +24,7 @@
 }
 
 .instruction-up-container {
-  padding: 10% 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -38,16 +38,31 @@
   padding-bottom: 5rem;
 }
 
+.theme-colors-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.theme-color {
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  background-color: #2f2f2f;
+  border: 1.2px solid black;
+  box-shadow: 2px 1px 10px 0px rgba(0, 0, 0, 0.43);
+}
+
 .setup-game h2 {
   font-size: 2.8rem;
 }
 .setup-game ul {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-left: 1rem;
   font-size: 1.9rem;
 }
 .setup-game ul li {
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .target-score {
@@ -95,7 +110,6 @@
 }
 
 .game-container {
-  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
@@ -106,6 +120,7 @@
     #651852,
     #481b50
   );
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,10 +283,11 @@ section {
   display: none;
   position: absolute;
   font-size: 2.2rem;
-  width: 25rem;
+  width: 28rem;
   text-align: center;
   font-weight: bold;
   top: -5rem;
+  color: #2f2f2f;
 }
 
 .my-turn-score-container {
@@ -291,17 +307,97 @@ section {
   opacity: 1;
 }
 
-.winning-player-text {
+.winning-player-text-1 {
   color: #9a1246;
 }
+.winning-player-text-2 {
+  color: #ed5e00;
+}
+.winning-player-text-3 {
+  color: #893b1f;
+}
+.lose-text {
+  color: #2f2f2f;
+}
+.color-1 {
+  background-image: linear-gradient(
+    to right bottom,
+    #ae1e39,
+    #9a1246,
+    #81134f,
+    #651852,
+    #481b50
+  );
+}
+.color-2 {
+  background-image: linear-gradient(
+    to right bottom,
+    #f20000,
+    #ed5e00,
+    #e58900,
+    #deab32,
+    #d9c860
+  );
+}
+.color-3 {
+  background-image: linear-gradient(
+    to right bottom,
+    #ab5a08,
+    #893b1f,
+    #602622,
+    #33171a,
+    #000000
+  );
+}
 
+.color-1-menu {
+  background-image: linear-gradient(
+    to right,
+    #a075a5,
+    #b078a1,
+    #be7b9c,
+    #ca8097,
+    #d38691
+  );
+  border: #6c4374 solid 1rem;
+}
+.color-2-menu {
+  background-image: linear-gradient(
+    to right,
+    #f20000,
+    #f15d00,
+    #eb8900,
+    #e3ae00,
+    #dacf38
+  );
+  border: #f15d00 solid 1rem;
+}
+.color-3-menu {
+  background-image: linear-gradient(
+    to right,
+    #893b1f,
+    #7f3521,
+    #752f22,
+    #6b2b22,
+    #602622
+  );
+  border: #752f22 solid 1rem;
+}
 
 .icon {
   height: calc(100% - 4px);
 }
+.background-theme-1 {
+  background-color: #911c48;
+}
+.background-theme-2 {
+  background-color: #e87630;
+  
+}
+.background-theme-3 {
+  background-color: #602622;
 
-
-
+}
 
 @media only screen and (max-width: 600px) {
   body,
@@ -362,8 +458,11 @@ section {
     padding-bottom: 14rem;
   }
   .setup-game {
-    width: 95%;
-    height: 98%;
+    top: 0;
+    transform: translate(-50%,0);
+    width: 100%;
+    height: 100%;
+    min-height: 680px;
   }
   .setup-game h2 {
     font-size: 3rem;
@@ -406,5 +505,10 @@ section {
     height: 70%;
     margin: 0;
   }
+  
+  .win-loss {
+    font-size: 1.9rem;
+    top: -7rem;
+    width: 100%;
+  }
 }
-

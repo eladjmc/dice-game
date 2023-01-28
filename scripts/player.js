@@ -18,7 +18,6 @@ export class Player {
     this.dice2 = 1;
     this.scoreToWin = 0;
     this.isGameOver = false;
-
     this.name = name.toUpperCase();
     this.eventListeners();
   }
@@ -107,6 +106,7 @@ export class Player {
       localStorage.setItem("dice2", this.dice2);
       selectors.diceOne.style = `background: url('./assets/images/dice-${this.dice1}.png') no-repeat center center/cover;`;
       selectors.diceTwo.style = `background: url('./assets/images/dice-${this.dice2}.png') no-repeat center center/cover;`;
+      
     }
     setTimeout(() => {
       this.dice1 = parseInt(localStorage.getItem("dice1"));
