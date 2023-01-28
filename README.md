@@ -11,16 +11,18 @@ The basic task was to make a dice game with the specifications given in writing 
 #### 6-6 reset the current points and move turn
 whenever a 6-6 dice is rolled the player lose his turn and all the current points.
 
-#### all basic rules set in place
+#### All basic rules set in place
 every player can role the dice until he uses 'hold' and if a player reach the target points he win, if he pass the target points he loss
+
+
+#### Styling same as original
+I was trying to make the basic game look almost the same as the original game from the specs
 
 <a href="gameSpecs.pdf" target="_blank">Instructions-PDF</a>
 
 <br>
 
-#### styling same as original
-I was trying to make the basic game look almost the same as the original game from the specs
-#### themes
+#### Themes
 I decided to add some color themes for fun so you can pick one out of 3 different styles
 
 #### App responsiveness
