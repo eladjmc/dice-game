@@ -43,6 +43,8 @@ https://elad-dice-game.netlify.app/
 
 ![Alt text](./assets/images/screenshots/Screenshot1.png?raw=true "Title") 
 
+![plot](./assets/images/screenshots/Screenshot2.png) 
+
 ![plot](./assets/images/screenshots/Screenshot3.png) 
 
 ![plot](./assets/images/screenshots/Screenshot4.png) 
