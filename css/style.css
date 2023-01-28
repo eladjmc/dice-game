@@ -338,6 +338,7 @@ section {
   }
 
   .game-controllers {
+    min-height: 700px;
     justify-content: center;
     gap: 1rem;
   }
@@ -406,3 +407,4 @@ section {
     margin: 0;
   }
 }
+
