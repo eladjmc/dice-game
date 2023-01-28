@@ -15,7 +15,7 @@ whenever a 6-6 dice is rolled the player lose his turn and all the current point
 every player can role the dice until he uses 'hold' and if a player reach the target points he win, if he pass the target points he loss
 
 #### themes
-I decided to add some color themes for fun so you can pick onr out of 3 different styles
+I decided to add some color themes for fun so you can pick one out of 3 different styles
 
 #### App responsiveness
 I made sure that the app is useable for smaller screens as well.
