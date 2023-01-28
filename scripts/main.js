@@ -48,6 +48,7 @@ let winningMessage = "";
 let isGameOver = false;
 const startGameSound = new Audio("../assets/audio/RoundOneFight.mp3");
 const gameOverSound = new Audio("../assets/audio/Fatality.mp3");
+const tenseGameMusic = new Audio("../assets/audio/TenseMusic.mp3");
 const player1 = new Player(true, "player1", playerOneUiSelectors);
 const player2 = new Player(false, "player2", playerTwoUiSelectors);
 
@@ -73,9 +74,13 @@ const startGame = () => {
     () => (gameSelectors.gameSetupWindow.style.display = "none"),
     startGameSound.play()
   );
+  tenseGameMusic.loop=true;
+  tenseGameMusic.play();
 };
 
 const resetGame = () => {
+  tenseGameMusic.pause();
+  tenseGameMusic.currentTime = 0;
   removeWinsUI();
   gameSelectors.gameSetupWindow.style.display = "flex";
   isGameOver = false;
