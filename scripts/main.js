@@ -78,7 +78,7 @@ const startGame = () => {
   setTimeout(() => {
     gameSelectors.gameSetupWindow.style.display = "none";
   }, 500);
-  startGameSound.play()
+  startGameSound.play();
   tenseGameMusic.loop = true;
   tenseGameMusic.play();
 };
@@ -162,10 +162,10 @@ const setWinning = (winner, loser) => {
   winner.winLossText.style.display = "block";
   winner.winLossText.textContent = "YOU WIN!";
   winner.background.classList.add("back-win");
-  winner.playersName.classList.remove('lose-text');
+  winner.playersName.classList.remove("lose-text");
   //loser-setup
   loser.winLossText.style.display = "block";
-  loser.winLossText.classList.add('lose-text');
+  loser.winLossText.classList.add("lose-text");
   loser.winLossText.textContent = winningMessage;
 };
 // #########################################################################################################################
@@ -173,8 +173,8 @@ const setWinning = (winner, loser) => {
 // #########################################################################################################################
 
 const removeWinsUI = () => {
-  playerOneUiSelectors.playersName.classList.add('lose-text');
-  playerTwoUiSelectors.playersName.classList.add('lose-text');
+  playerOneUiSelectors.playersName.classList.add("lose-text");
+  playerTwoUiSelectors.playersName.classList.add("lose-text");
   playerOneUiSelectors.winLossText.classList.remove(`lose-text`);
   playerTwoUiSelectors.winLossText.classList.remove(`lose-text`);
   playerOneUiSelectors.background.classList.remove("back-win");
@@ -185,12 +185,9 @@ const removeWinsUI = () => {
   playerTwoUiSelectors.winLossText.style.display = "none";
 };
 
-
-
 // #########################################################################################################################
 // #                                      THEME CHANGE LOGIC                                                               #
 // #########################################################################################################################
-
 
 const changeTheme = (themeId) => {
   for (let i = 0; i < gameSelectors.themeColor.length; i++) {
@@ -202,13 +199,24 @@ const changeTheme = (themeId) => {
     gameSelectors.currentScoreContainers[1].classList.remove(
       `background-theme-${i + 1}`
     );
-    playerOneUiSelectors.winLossText.classList.remove(`winning-player-text-${i+1}`);
-    playerTwoUiSelectors.winLossText.classList.remove(`winning-player-text-${i+1}`);
-    playerOneUiSelectors.playersName.classList.remove(`winning-player-text-${i+1}`);
-    playerTwoUiSelectors.playersName.classList.remove(`winning-player-text-${i+1}`);
-    playerOneUiSelectors.playersScore.classList.remove(`winning-player-text-${i+1}`);
-    playerTwoUiSelectors.playersScore.classList.remove(`winning-player-text-${i+1}`);
-
+    playerOneUiSelectors.winLossText.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
+    playerTwoUiSelectors.winLossText.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
+    playerOneUiSelectors.playersName.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
+    playerTwoUiSelectors.playersName.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
+    playerOneUiSelectors.playersScore.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
+    playerTwoUiSelectors.playersScore.classList.remove(
+      `winning-player-text-${i + 1}`
+    );
   }
   gameSelectors.gameContainer.classList.add(`color-${themeId}`);
   gameSelectors.gameSetupWindow.classList.add(`color-${themeId}-menu`);
@@ -216,15 +224,28 @@ const changeTheme = (themeId) => {
     `background-theme-${themeId}`
   );
 
-  gameSelectors.currentScoreContainers[1].classList.add(`background-theme-${themeId}`);
-  playerOneUiSelectors.winLossText.classList.add(`winning-player-text-${themeId}`);
-  playerTwoUiSelectors.winLossText.classList.add(`winning-player-text-${themeId}`);
-  playerOneUiSelectors.playersName.classList.add(`winning-player-text-${themeId}`);
-  playerTwoUiSelectors.playersName.classList.add(`winning-player-text-${themeId}`);
-  playerOneUiSelectors.playersScore.classList.add(`winning-player-text-${themeId}`);
-  playerTwoUiSelectors.playersScore.classList.add(`winning-player-text-${themeId}`);
+  gameSelectors.currentScoreContainers[1].classList.add(
+    `background-theme-${themeId}`
+  );
+  playerOneUiSelectors.winLossText.classList.add(
+    `winning-player-text-${themeId}`
+  );
+  playerTwoUiSelectors.winLossText.classList.add(
+    `winning-player-text-${themeId}`
+  );
+  playerOneUiSelectors.playersName.classList.add(
+    `winning-player-text-${themeId}`
+  );
+  playerTwoUiSelectors.playersName.classList.add(
+    `winning-player-text-${themeId}`
+  );
+  playerOneUiSelectors.playersScore.classList.add(
+    `winning-player-text-${themeId}`
+  );
+  playerTwoUiSelectors.playersScore.classList.add(
+    `winning-player-text-${themeId}`
+  );
 };
-
 
 //TODO: replace this with none promise delay
 const delay = (time) => {
