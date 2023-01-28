@@ -42,12 +42,12 @@
   font-size: 2.8rem;
 }
 .setup-game ul {
-  margin-top: 2rem;
+  margin-top: .5rem;
   margin-left: 1rem;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 .setup-game ul li {
-  margin-top: 1rem;
+  margin-top: .3rem;
 }
 
 .target-score {
@@ -365,19 +365,19 @@ section {
     height: 98%;
   }
   .setup-game h2 {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .setup-game h3 {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
   .error-input {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .setup-game ul {
     padding-left: 10px;
     margin-top: 5px;
-    font-size: 2.3rem;
+    font-size: 1.9rem;
   }
 
   .score-to-win-input {
